@@ -101,6 +101,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+          
+      - name: Set execute permissions
+        run: chmod +x gradlew
+
       - name: Build JAR with Gradle
         run: ./gradlew clean build
 
