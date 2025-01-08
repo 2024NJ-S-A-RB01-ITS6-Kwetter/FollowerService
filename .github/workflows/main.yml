@@ -78,6 +78,9 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4.0.0
+        
+      - name: Set execute permissions
+        run: chmod +x gradlew
       - name: Run SonarQube Analysis
         run: ./gradlew build jacocoTestReport sonarqube --info
         env:
