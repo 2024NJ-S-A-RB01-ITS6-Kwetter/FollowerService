@@ -113,10 +113,10 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t bwildeman/Kwetter_FollowerService:latest -t bwildeman/Kwetter_FollowerService:${{ github.sha }} .
+          docker build -t bwildeman/kwetter_followerservice:latest -t bwildeman/kwetter_followerservice:${{ github.sha }} .
 
       - name: Push Docker Image with SHA Tag
-        run: docker push bwildeman/Kwetter_FollowerService:${{ github.sha }}
+        run: docker push bwildeman/kwetter_followerservice:${{ github.sha }}
 
       - name: Push Docker Image with Latest Tag
-        run: docker push bwildeman/Kwetter_FollowerService:latest
+        run: docker push bwildeman/kwetter_followerservice:latest
