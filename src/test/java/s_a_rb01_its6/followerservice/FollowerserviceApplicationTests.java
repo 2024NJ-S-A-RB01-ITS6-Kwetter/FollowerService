@@ -9,7 +9,8 @@ import org.springframework.test.context.ActiveProfiles;
 class FollowerserviceApplicationTests {
 
     @Test
-    void contextLoads() {
+    void test() {
+        assert true;
     }
 
 }
