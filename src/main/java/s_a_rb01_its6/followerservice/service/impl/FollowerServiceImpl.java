@@ -27,8 +27,13 @@ public class FollowerServiceImpl implements FollowerService {
     private final FollowerRepository FollowRepository;
     private final RabbitTemplate rabbitTemplate;
 
+
+    //TODO implement the ability for profiles to be private or public
     @Override
     public void requestFollow(FollowRequest followRequest) {
+        //see if profile is public or private and if private send a follow request else follow directly
+
+
         FollowRequestEntity followRequestEntity = FollowRequestEntity.builder()
                 .requester_id(followRequest.requester_id())
                 .requested_id(followRequest.requested_id())

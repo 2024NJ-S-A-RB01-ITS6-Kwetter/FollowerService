@@ -17,6 +17,9 @@ public class FollowerController {
 
     private final FollowerService followerService;
 
+    //TODO implement to load active requests on login
+
+
     @PostMapping("/request")
     public ResponseEntity<String> follow(@RequestBody FollowRequest followRequest){
         followerService.requestFollow(followRequest);
