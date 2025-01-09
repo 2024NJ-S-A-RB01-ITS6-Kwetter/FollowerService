@@ -11,7 +11,19 @@ class FollowerServiceImplTest {
     }
 
     @Test
-    void handleFollowResponse() {
+    void requestFollowAlreadyFollowing() {
+    }
+
+    @Test
+    void handleFollowResponseAccepted() {
+    }
+
+    @Test
+    void handleFollowResponseDenied() {
+    }
+
+    @Test
+    void handleFollowResponseNoRequest() {
     }
 
     @Test

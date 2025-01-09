@@ -17,7 +17,7 @@ public class FollowerController {
 
     private final FollowerService followerService;
 
-    //TODO implement to load active requests on login
+    //TODO implement to load active follow requests on login
 
 
     @PostMapping("/request")
