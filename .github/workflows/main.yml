@@ -78,6 +78,9 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4.0.0
+        
+      - name: Set execute permissions
+        run: chmod +x gradlew
       - name: Run SonarQube Analysis
         run: ./gradlew build jacocoTestReport sonarqube --info
         env:
@@ -98,6 +101,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+          
+      - name: Set execute permissions
+        run: chmod +x gradlew
+
       - name: Build JAR with Gradle
         run: ./gradlew clean build
 
@@ -106,10 +113,10 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t bwildeman/kwetter_followservice:latest -t bwildeman/kwetter_followservice:${{ github.sha }} .
+          docker build -t bwildeman/kwetter_followerservice:latest -t bwildeman/kwetter_followerservice:${{ github.sha }} .
 
       - name: Push Docker Image with SHA Tag
-        run: docker push bwildeman/kwetter_followservice:${{ github.sha }}
+        run: docker push bwildeman/kwetter_followerservice:${{ github.sha }}
 
       - name: Push Docker Image with Latest Tag
-        run: docker push bwildeman/kwetter_followservice:latest
+        run: docker push bwildeman/kwetter_followerservice:latest
