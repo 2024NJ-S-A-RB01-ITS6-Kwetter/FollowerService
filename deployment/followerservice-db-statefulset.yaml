@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: post-service-db
 spec:
-  serviceName: "post-service-db"
+  serviceName: "follow-service-db"
   replicas: 1
   selector:
     matchLabels:
