@@ -4,3 +4,4 @@ metadata:
   name: follow-service-db-config
 data:
   MYSQL_DATABASE: "follow_service"
+  MYSQL_DATASOURCE: "amRiYzpteXNxbDovL2ZvbGxvdy1zZXJ2aWNlLWRiOjMzMDYvZm9sbG93X3NlcnZpY2U="
